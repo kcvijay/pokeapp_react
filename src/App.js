@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Layout from "./Pages/Layout";
+import Home from "./Components/Home";
+import Pokemons from "./Components/Pokemons";
+import About from "./Components/About";
+import PokeSingle from "./Components/PokeSingle";
+import Notfound from "./Components/Notfound";
+import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// Higher Order function for individual detail page because Class component cannot use params.
+const RouterWrapper = (props) => {
+  const params = useParams();
+  return <PokeSingle params={params} {...props} />;
+};
+
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="pokemons" element={<Pokemons />} />
+            {/* Function RouterWrapper has acted as a component below */}
+            <Route path="pokemons/:pokesingle" element={<RouterWrapper />} />
+            <Route path="about" element={<About />} />
+            <Route path="*" element={<Notfound />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;
