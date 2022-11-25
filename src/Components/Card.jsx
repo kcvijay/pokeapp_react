@@ -10,7 +10,7 @@ const Card = (props) => {
       <h2 className="pokemon-name">
         {props.name}
         <span className="tooltip-detail">
-          <Link to={`${props.name}`}>More Detail</Link>
+          <Link to={`${props.name}`}>More Details</Link>
         </span>
       </h2>
     </div>

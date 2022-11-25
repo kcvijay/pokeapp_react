@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Notfound.css";
+import classes from "./Notfound.module.css";
 
 const Notfound = () => {
   return (
-    <div>
-      <h1>ERROR 404</h1>
+    <div className={classes.pnf_wrapper}>
+      <h1 className={classes.error_header}>ERROR 404</h1>
       <p>Page not found!</p>
       <p>Where do you want to go?</p>
-      <div className="redirect-links">
+      <div className={classes.redirect_links}>
         <Link to="/">Home</Link>
         <Link to="/pokemons">Pokemons</Link>
       </div>

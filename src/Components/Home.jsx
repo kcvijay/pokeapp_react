@@ -8,9 +8,8 @@ const Home = () => {
     <div className="home-page">
       <h1 className="home-header">PokeApp</h1>
       <img className="pikachu-img" src={PikachuImg} alt="pikachu-img"></img>
-      <p>Find your favorite Pokemons</p>
       <Link id="to-pokemons" to="/pokemons">
-        Browse
+        Browse Pokemons
       </Link>
     </div>
   );

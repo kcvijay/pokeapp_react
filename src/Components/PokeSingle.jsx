@@ -1,10 +1,12 @@
-import { joinPaths } from "@remix-run/router";
+// import { joinPaths } from "@remix-run/router";
 import React, { Component } from "react";
 import classes from "./PokeSingle.module.css";
 
 class PokeSingle extends Component {
   state = {
     data: [],
+    types: [],
+    moves: [],
     isLoading: false,
   };
 
@@ -17,6 +19,8 @@ class PokeSingle extends Component {
       .then((data) => {
         this.setState({
           data: data,
+          types: data.types,
+          moves: data.moves,
           isLoading: false,
         });
       });
@@ -53,11 +57,17 @@ class PokeSingle extends Component {
 
               <tr>
                 <td>Types</td>
-                <td></td>
+                <td>
+                  {this.state.types
+                    .map((type) => {
+                      return type.type.name;
+                    })
+                    .join(", ")}
+                </td>
               </tr>
               <tr>
                 <td>Moves</td>
-                <td></td>
+                <td>{this.state.moves.length}</td>
               </tr>
             </tbody>
           </table>
