@@ -9,8 +9,8 @@ const Notfound = () => {
       <p>Page not found!</p>
       <p>Where do you want to go?</p>
       <div className={classes.redirect_links}>
-        <Link to="/">Home</Link>
-        <Link to="/pokemons">Pokemons</Link>
+        <Link to="/">&larr;&nbsp;Home</Link>
+        <Link to="/pokemons">Pokemons&nbsp;&rarr;</Link>
       </div>
     </div>
   );
