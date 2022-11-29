@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import PikachuImg from "../Assets/pikachu.png";
+
 import "./Home.css";
 
 const Home = () => {
