@@ -1,11 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Nav from "./Nav";
 import "./Header.css";
 
 export default function Header() {
   return (
     <header>
-      <h1>PokeApp in React</h1>
+      <Link className="logo" to="/">
+        PokeApp in React
+      </Link>
       <Nav />
     </header>
   );

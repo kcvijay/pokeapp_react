@@ -26,6 +26,9 @@ class Pokemons extends Component {
             isLoading: false,
           });
         });
+      })
+      .catch((err) => {
+        return err.message;
       });
   }
 

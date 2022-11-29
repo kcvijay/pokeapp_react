@@ -14,7 +14,7 @@ class PokeSingle extends Component {
     this.setState({
       isLoading: true,
     });
-    fetch(`https://pokeapi.co/api/v2/pokemon/${this.props.params.pokesingle}`)
+    fetch(`https://pokeapi.co/api/v2/pokemon/${this.props.params.pokesingle}`) // Class constructor has already props built in.
       .then((res) => res.json())
       .then((data) => {
         this.setState({
@@ -50,6 +50,7 @@ class PokeSingle extends Component {
                 <td>Height</td>
                 <td>{this.state.data.height / 10} Meter</td>
               </tr>
+
               <tr>
                 <td>Weight</td>
                 <td>{this.state.data.weight / 10} Kg</td>
@@ -65,6 +66,7 @@ class PokeSingle extends Component {
                     .join(", ")}
                 </td>
               </tr>
+
               <tr>
                 <td>Moves</td>
                 <td>{this.state.moves.length}</td>

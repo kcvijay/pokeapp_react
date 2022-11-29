@@ -1,11 +1,13 @@
 import React, { Component } from "react";
+import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
+
 import Layout from "./Pages/Layout";
 import Home from "./Components/Home";
 import Pokemons from "./Components/Pokemons";
 import About from "./Components/About";
 import PokeSingle from "./Components/PokeSingle";
 import Notfound from "./Components/Notfound";
-import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
+
 import "./App.css";
 
 // Higher Order function for individual detail page because Class component cannot use params.
