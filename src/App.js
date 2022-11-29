@@ -22,7 +22,6 @@ class App extends Component {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="pokemons" element={<Pokemons />} />
-            {/* Function RouterWrapper has acted as a component below */}
             <Route path="pokemons/:pokesingle" element={<RouterWrapper />} />
             <Route path="about" element={<About />} />
             <Route path="*" element={<Notfound />} />
