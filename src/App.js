@@ -9,7 +9,6 @@ import PokeSingle from "./Components/PokeSingle";
 import Notfound from "./Components/Notfound";
 
 import "./App.css";
-
 // Higher Order function for individual detail page because Class component cannot use params.
 const RouterWrapper = (props) => {
   const params = useParams();

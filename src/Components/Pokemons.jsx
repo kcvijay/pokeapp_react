@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Card from "./Card";
+import GenDropdown from "./GenDropdown";
 import classes from "./Pokemons.module.css";
 
 class Pokemons extends Component {
@@ -40,6 +41,7 @@ class Pokemons extends Component {
     return (
       <div>
         <h1>Pokemons</h1>
+        <GenDropdown />
         <div className={classes.cards}>
           {this.state.data.map((card) => {
             return (
